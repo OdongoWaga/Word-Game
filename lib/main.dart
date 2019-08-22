@@ -5,6 +5,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final noun = WordNoun.random();
+  final adjective = WordAdjective.random();
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
             title: Text("Word Game"),
           ),
           body: Center(
-            child: Text('Noun: ${noun.asCapitalized}'),
+            child: Text('The programmer wrote a ${adjective.asCapitalized}'
+                'app in Flutter and showed it '
+                'off to his ${noun.asCapitalized}'),
           )),
     );
   }
